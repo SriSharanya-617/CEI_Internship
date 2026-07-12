@@ -107,12 +107,10 @@ if "GOOGLE_API_KEY" not in st.secrets:
 
     st.stop()
 
-st.write("APP VERSION: 999")
-
 api_key = st.secrets["GOOGLE_API_KEY"]
-
 st.write("Key starts with:", api_key[:10])
 st.write("Key length:", len(api_key))
+
 client = genai.Client(
     api_key=api_key
 )
@@ -192,11 +190,11 @@ def build_vector_database(pdf_path):
 
                 break
 
-            except Exception:
+            except Exception as e:
+                st.error(f"Embedding Error: {e}")
 
                 if attempt == 2:
                     raise
-
                 time.sleep(15)
 
         progress.progress(
