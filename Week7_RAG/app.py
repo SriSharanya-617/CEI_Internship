@@ -108,8 +108,6 @@ if "GOOGLE_API_KEY" not in st.secrets:
     st.stop()
 
 api_key = st.secrets["GOOGLE_API_KEY"]
-st.write("Key starts with:", api_key[:10])
-st.write("Key length:", len(api_key))
 
 client = genai.Client(
     api_key=api_key
