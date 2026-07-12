@@ -1,0 +1,982 @@
+html,
+body,
+.stApp{
+
+    background:#f4f8fc;
+
+    color:#222222;
+
+    font-family:"Segoe UI",sans-serif;
+}
+
+
+/* Hide Streamlit */
+
+#MainMenu,
+header,
+footer{
+
+    visibility:hidden;
+}
+
+
+.block-container{
+
+    padding-top:2rem;
+
+    padding-left:2.5rem;
+
+    padding-right:2.5rem;
+
+    padding-bottom:2rem;
+}
+
+
+/* ===========================
+   HEADINGS
+=========================== */
+
+h1{
+
+    color:#1f3b72;
+
+    font-size:2.5rem;
+
+    font-weight:700;
+}
+
+h2{
+
+    color:#2563eb;
+
+    font-weight:700;
+}
+
+h3{
+
+    color:#2563eb;
+}
+
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero-card{
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:38px;
+
+    margin-bottom:30px;
+
+    border:1px solid #e8eef8;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+
+.hero-title{
+
+    color:#1e3a8a;
+
+    font-size:40px;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+}
+
+
+.hero-subtitle{
+
+    color:#5d6470;
+
+    font-size:17px;
+
+    line-height:1.9;
+}
+
+
+/* ===========================
+   SIDEBAR
+=========================== */
+
+[data-testid="stSidebar"]{
+
+    background:white;
+
+    border-right:1px solid #edf2f8;
+}
+
+
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3{
+
+    color:#2563eb;
+}
+
+
+[data-testid="stSidebar"] p{
+
+    color:#444;
+
+    line-height:1.8;
+}
+
+
+[data-testid="stSidebar"]{
+
+    box-shadow:5px 0px 15px rgba(0,0,0,.04);
+}
+
+
+/* ===========================
+   UPLOAD CARD
+=========================== */
+
+.upload-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:22px;
+
+    border:1px solid #edf2f8;
+
+    margin-bottom:15px;
+
+    box-shadow:0 8px 22px rgba(0,0,0,.08);
+}
+
+
+.upload-title{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#2563eb;
+
+    margin-bottom:10px;
+}
+
+
+.upload-subtitle{
+
+    color:#777;
+
+    font-size:15px;
+}
+
+
+/* ===========================
+   FILE UPLOADER
+=========================== */
+
+[data-testid="stFileUploader"]{
+
+    background:white;
+
+    border:2px dashed #8fbfff;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    transition:.3s;
+
+    margin-bottom:20px;
+}
+
+
+[data-testid="stFileUploader"]:hover{
+
+    border-color:#3b82f6;
+
+    background:#f8fbff;
+}
+
+
+/* ===========================
+   UPLOAD SUCCESS
+=========================== */
+
+.upload-success{
+
+    background:#e9f9ef;
+
+    color:#1f6d39;
+
+    border-left:6px solid #22c55e;
+
+    border-radius:14px;
+
+    padding:18px;
+
+    margin-top:15px;
+
+    margin-bottom:20px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+
+    font-size:16px;
+}
+
+
+/* ===========================
+   PROCESSING CARD
+=========================== */
+
+.processing-card{
+
+    background:#eef5ff;
+
+    border-left:6px solid #60a5fa;
+
+    border-radius:18px;
+
+    padding:22px;
+
+    margin-top:15px;
+
+    margin-bottom:25px;
+
+    color:#1e3a8a;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.06);
+}
+
+
+.processing-card h3{
+
+    margin-top:10px;
+
+    color:#2563eb;
+
+    font-size:32px;
+}
+
+
+/* ===========================
+   METRIC CARDS
+=========================== */
+
+.metric-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    text-align:center;
+
+    border:1px solid #edf2f8;
+
+    box-shadow:0 8px 22px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    margin-bottom:15px;
+
+    cursor:pointer;
+}
+
+
+.metric-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 14px 30px rgba(0,0,0,.12);
+}
+
+
+.metric-icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:#e8f1ff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:32px;
+
+    margin:auto;
+
+    margin-bottom:16px;
+}
+
+
+.metric-title{
+
+    color:#666;
+
+    font-size:15px;
+
+    margin-bottom:10px;
+}
+
+
+.metric-value{
+
+    color:#1e3a8a;
+
+    font-size:34px;
+
+    font-weight:700;
+}
+
+
+/* ===========================
+   HORIZONTAL RULE
+=========================== */
+
+hr{
+
+    border:none;
+
+    border-top:1px solid #dfe8f5;
+
+    margin:25px 0;
+}
+question-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    margin-top:20px;
+
+    margin-bottom:20px;
+
+    border:1px solid #edf2f8;
+
+    box-shadow:0 8px 22px rgba(0,0,0,.08);
+}
+
+
+.question-title{
+
+    color:#2563eb;
+
+    font-size:25px;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+}
+
+
+.question-subtitle{
+
+    color:#666;
+
+    font-size:15px;
+
+    margin-bottom:18px;
+}
+
+
+/* ===========================
+   TEXT INPUT
+=========================== */
+
+.stTextInput{
+
+    margin-bottom:20px;
+}
+
+.stTextInput input{
+
+    background:white;
+
+    color:#222;
+
+    border-radius:14px;
+
+    border:2px solid #d9e3f2;
+
+    padding:14px;
+
+    font-size:16px;
+
+    transition:.3s;
+}
+
+.stTextInput input:hover{
+
+    border-color:#7db7ff;
+}
+
+.stTextInput input:focus{
+
+    border:2px solid #4f8cff;
+
+    box-shadow:0 0 12px rgba(79,140,255,.20);
+}
+
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.stButton{
+
+    margin-top:10px;
+}
+
+.stButton>button{
+
+    background:#4f8cff;
+
+    color:white;
+
+    border:none;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    padding:14px 30px;
+
+    width:220px;
+
+    transition:.3s;
+
+    box-shadow:0 6px 18px rgba(79,140,255,.25);
+}
+
+
+.stButton>button:hover{
+
+    background:#6ba8ff;
+
+    color:white;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 28px rgba(79,140,255,.35);
+}
+
+
+/* ===========================
+   GENERATED ANSWER
+=========================== */
+
+.answer-box{
+
+    background:white;
+
+    border-left:6px solid #8fc4ff;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    margin-top:20px;
+
+    margin-bottom:20px;
+
+    color:#222;
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    white-space:pre-wrap;
+
+    word-wrap:break-word;
+
+    overflow-wrap:break-word;
+}
+
+
+/* ===========================
+   EXPANDER
+=========================== */
+
+.streamlit-expanderHeader{
+
+    color:#2563eb;
+
+    font-size:17px;
+
+    font-weight:600;
+}
+
+
+.streamlit-expanderContent{
+
+    background:#fafcff;
+}
+
+
+/* ===========================
+   DOWNLOAD BUTTON
+=========================== */
+
+.stDownloadButton{
+
+    margin-top:15px;
+}
+
+
+.stDownloadButton>button{
+
+    background:#edf5ff;
+
+    color:#2563eb;
+
+    border:1px solid #bcd7ff;
+
+    border-radius:14px;
+
+    padding:12px 24px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+
+.stDownloadButton>button:hover{
+
+    background:#dbeaff;
+
+    color:#1e3a8a;
+}
+
+
+/* ===========================
+   SUCCESS BOX
+=========================== */
+
+.stSuccess{
+
+    background:#edfdf2;
+
+    border-radius:14px;
+
+    border-left:6px solid #22c55e;
+
+    color:#1f6d39;
+}
+
+
+/* ===========================
+   INFO BOX
+=========================== */
+
+.stInfo{
+
+    background:#eef6ff;
+
+    border-radius:14px;
+
+    border-left:6px solid #60a5fa;
+
+    color:#1e3a8a;
+}
+
+
+/* ===========================
+   WARNING
+=========================== */
+
+.stWarning{
+
+    border-radius:14px;
+
+    border-left:6px solid orange;
+}
+
+
+/* ===========================
+   ERROR
+=========================== */
+
+.stError{
+
+    border-radius:14px;
+
+    border-left:6px solid red;
+}
+
+
+/* ===========================
+   CODE BLOCKS
+=========================== */
+
+code{
+
+    color:#2563eb;
+}
+
+
+/* ===========================
+   TABLES
+=========================== */
+
+table{
+
+    border-radius:15px;
+
+    overflow:hidden;
+}
+
+
+/* ===========================
+   SPACING
+=========================== */
+
+.stMarkdown{
+
+    margin-bottom:10px;
+}
+
+
+/* ===========================
+   SUBHEADINGS
+=========================== */
+
+h2{
+
+    margin-top:18px;
+
+    margin-bottom:15px;
+}
+
+
+/* ===========================
+   DIVIDER
+=========================== */
+
+hr{
+
+    margin-top:30px;
+
+    margin-bottom:30px;
+}
+.footer{
+
+    text-align:center;
+
+    margin-top:40px;
+
+    padding:20px;
+
+    color:#666;
+
+    font-size:14px;
+
+    line-height:1.8;
+}
+
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+.hero-card,
+.upload-card,
+.metric-card,
+.processing-card,
+.answer-box{
+
+    animation:fadeIn .6s ease-in-out;
+}
+
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+
+/* ===========================
+   HOVER EFFECTS
+=========================== */
+
+.hero-card:hover{
+
+    transform:translateY(-4px);
+
+    transition:.3s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.10);
+}
+
+
+.upload-card:hover{
+
+    transform:translateY(-3px);
+
+    transition:.3s;
+
+    box-shadow:0 12px 28px rgba(0,0,0,.10);
+}
+
+
+.answer-box:hover{
+
+    transform:translateY(-3px);
+
+    transition:.3s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.10);
+}
+
+
+.processing-card:hover{
+
+    transform:translateY(-3px);
+
+    transition:.3s;
+}
+
+
+/* ===========================
+   LINKS
+=========================== */
+
+a{
+
+    color:#2563eb;
+
+    text-decoration:none;
+}
+
+a:hover{
+
+    color:#0d47a1;
+
+    text-decoration:underline;
+}
+
+
+/* ===========================
+   LABELS
+=========================== */
+
+label{
+
+    color:#1e3a8a !important;
+
+    font-weight:600;
+}
+
+
+/* ===========================
+   METRIC ICON GLOW
+=========================== */
+
+.metric-icon{
+
+    transition:.35s;
+}
+
+.metric-card:hover .metric-icon{
+
+    transform:scale(1.08);
+
+    background:#d9e9ff;
+}
+
+
+/* ===========================
+   EXPANDER CARD
+=========================== */
+
+details{
+
+    background:white;
+
+    border-radius:16px;
+
+    padding:10px;
+
+    border:1px solid #edf2f8;
+
+    box-shadow:0 6px 16px rgba(0,0,0,.06);
+
+    margin-bottom:12px;
+}
+
+
+/* ===========================
+   SYSTEM SUMMARY AREA
+=========================== */
+
+.summary-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:22px;
+
+    border:1px solid #edf2f8;
+
+    box-shadow:0 8px 22px rgba(0,0,0,.08);
+
+    margin-top:20px;
+}
+
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+
+    background:#f4f8fc;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#b8cff8;
+
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#7faeff;
+}
+
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+@media screen and (max-width:992px){
+
+    .hero-title{
+
+        font-size:30px;
+    }
+
+    .hero-subtitle{
+
+        font-size:15px;
+    }
+
+    .metric-value{
+    color:#1e3a8a;
+    font-size:34px;
+    font-weight:700;
+}
+
+}
+
+
+@media screen and (max-width:768px){
+
+    .block-container{
+
+        padding:18px;
+    }
+
+    .hero-card{
+
+        padding:25px;
+    }
+
+    .upload-card{
+
+        padding:18px;
+    }
+
+    .metric-card{
+
+        margin-bottom:18px;
+    }
+
+    .answer-box{
+
+        padding:20px;
+    }
+
+}
+
+
+/* ===========================
+   REMOVE EXTRA WHITESPACE
+=========================== */
+
+.element-container{
+
+    margin-bottom:.45rem;
+}
+
+.css-1kyxreq{
+
+    gap:.8rem;
+}
+
+
+/* ===========================
+   FINAL PREMIUM LOOK
+=========================== */
+
+.hero-card,
+.upload-card,
+.metric-card,
+.answer-box,
+.processing-card,
+.summary-card{
+
+    backdrop-filter:blur(10px);
+
+    -webkit-backdrop-filter:blur(10px);
+}
+[data-testid="stMetricValue"]{
+    color:#1f2937 !important;
+    font-weight:700 !important;
+}
+
+[data-testid="stMetricLabel"]{
+    color:#1e40af !important;
+    font-weight:600 !important;
+}
+
+
