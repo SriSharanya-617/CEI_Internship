@@ -169,22 +169,22 @@ def build_vector_database(pdf_path):
     )
 
     progress = st.progress(0)
-status = st.empty()
+    status = st.empty()
 
-status.text("Generating embeddings...")
+    status.text("Generating embeddings...")
 
-texts = [doc.page_content for doc in chunks]
+    texts = [doc.page_content for doc in chunks]
 
-response = client.models.embed_content(
-    model="gemini-embedding-001",
-    contents=texts
-)
+    response = client.models.embed_content(
+        model="gemini-embedding-001",
+        contents=texts
+    )
 
-embeddings = [e.values for e in response.embeddings]
+    embeddings = [e.values for e in response.embeddings]
 
-progress.progress(1.0)
+    progress.progress(1.0)
 
-status.text("Embeddings generated successfully.")
+    status.text("Embeddings generated successfully.")
 
     embedding_matrix = np.array(
         embeddings,
@@ -399,7 +399,7 @@ if uploaded_file is not None:
 
                 st.write("**Embedding Model:** Gemini Embedding 001")
                 st.write("**Vector Database:** FAISS")
-                st.write("**Language Model:** Gemini 3.5 Flash")
+                st.write("**Language Model:** Gemini 2.5 flash-lite")
                 st.write(f"**Retrieved Chunks:** {len(retrieved_docs)}")
 
 
