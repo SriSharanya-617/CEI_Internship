@@ -179,7 +179,7 @@ def build_vector_database(pdf_path):
             try:
 
                 response = client.models.embed_content(
-                    model="models/gemini-embedding-001",
+                    model="gemini-embedding-001",
                     contents=doc.page_content
                 )
 
@@ -363,7 +363,7 @@ if uploaded_file is not None:
                 try:
 
                     response = client.models.generate_content(
-                        model="models/gemini-3.5-flash",
+                        model="gemini-3.5-flash",
                         contents=prompt
                     )
 
