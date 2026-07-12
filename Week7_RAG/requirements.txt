@@ -1,8 +1,8 @@
-streamlit
-google-genai
-langchain
-langchain-community
-langchain-text-splitters
-faiss-cpu
-numpy
-pypdf
+streamlit==1.45.1
+google-genai==1.30.0
+langchain==0.3.27
+langchain-community==0.3.27
+langchain-text-splitters==0.3.9
+faiss-cpu==1.11.0.post1
+numpy==2.3.2
+pypdf==5.9.0
