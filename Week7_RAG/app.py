@@ -177,7 +177,6 @@ def build_vector_database(pdf_path):
         for attempt in range(3):
 
             try:
-
                 response = client.models.embed_content(
                     model="gemini-embedding-001",
                     contents=doc.page_content
@@ -297,7 +296,7 @@ if uploaded_file is not None:
     def retrieve(question, k=3):
 
         response = client.models.embed_content(
-            model="models/gemini-embedding-001",
+            model="gemini-embedding-001",
             contents=question
         )
 
