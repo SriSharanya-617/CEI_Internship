@@ -160,50 +160,31 @@ def build_vector_database(pdf_path):
     documents = loader.load()
 
     splitter = RecursiveCharacterTextSplitter(
-        chunk_size=500,
-        chunk_overlap=100
+        chunk_size=1200,
+        chunk_overlap=150
     )
 
     chunks = splitter.split_documents(
         documents
     )
 
-    embeddings = []
-
     progress = st.progress(0)
+status = st.empty()
 
-    status = st.empty()
+status.text("Generating embeddings...")
 
-    for i, doc in enumerate(chunks):
+texts = [doc.page_content for doc in chunks]
 
-        for attempt in range(3):
+response = client.models.embed_content(
+    model="gemini-embedding-001",
+    contents=texts
+)
 
-            try:
-                response = client.models.embed_content(
-                    model="gemini-embedding-001",
-                    contents=doc.page_content
-                )
+embeddings = [e.values for e in response.embeddings]
 
-                embeddings.append(
-                    response.embeddings[0].values
-                )
+progress.progress(1.0)
 
-                break
-
-            except Exception as e:
-                st.error(f"Embedding Error: {e}")
-
-                if attempt == 2:
-                    raise
-                time.sleep(15)
-
-        progress.progress(
-            (i + 1) / len(chunks)
-        )
-
-        status.text(
-            f"Generating Embeddings : {i + 1}/{len(chunks)}"
-        )
+status.text("Embeddings generated successfully.")
 
     embedding_matrix = np.array(
         embeddings,
